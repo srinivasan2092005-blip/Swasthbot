@@ -19,7 +19,7 @@ except ModuleNotFoundError:
     sr = None
 
 # 🔹 Path to corrected Excel file
-EXCEL_PATH = r"C:\Users\Srinivasan\Swasth bot\dataaas\odisha_diseases_39_with_updated_treatments.xlsx"
+EXCEL_PATH = "odisha_diseases_39_with_updated_treatments.xlsx"
 @st.cache_data
 def load_disease_data(path):
     df = pd.read_excel(path)
@@ -170,3 +170,4 @@ if symptom_input:
         st.plotly_chart(fig)
     else:
         st.info("No conditions match the selected symptoms.")
+
